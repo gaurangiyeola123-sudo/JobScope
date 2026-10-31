@@ -1,0 +1,21 @@
+id,title,company,location,experience,min_salary,max_salary,job_type,skills
+1,Data Analyst,TCS,Pune,Entry Level,300000,500000,Full-time,Python;SQL;Excel;Power BI
+2,Data Engineer,Accenture,Bengaluru,Mid Level,700000,1200000,Full-time,Python;SQL;AWS;Spark
+3,Python Developer,Infosys,Hyderabad,Entry Level,350000,600000,Full-time,Python;Django;SQL;Git
+4,Machine Learning Engineer,Google,Bengaluru,Senior Level,1800000,2800000,Full-time,Python;TensorFlow;ML;SQL
+5,Data Analyst,Wipro,Mumbai,Entry Level,400000,650000,Full-time,Python;SQL;Power BI;Excel
+6,Data Scientist,Amazon,Bengaluru,Mid Level,1200000,1800000,Full-time,Python;Pandas;Scikit-learn;SQL
+7,Data Engineer,Capgemini,Pune,Entry Level,450000,750000,Full-time,Python;SQL;ETL;AWS
+8,Business Analyst,Deloitte,Mumbai,Mid Level,800000,1300000,Full-time,Excel;SQL;Power BI;Tableau
+9,AI Engineer,Microsoft,Hyderabad,Senior Level,2000000,3000000,Full-time,Python;GenAI;LLM;PyTorch
+10,Python Developer,Cognizant,Pune,Entry Level,350000,550000,Full-time,Python;Flask;SQL;REST API
+11,Data Engineer,Flipkart,Bengaluru,Mid Level,1000000,1600000,Full-time,Python;SQL;Spark;Airflow
+12,Data Analyst,IBM,Hyderabad,Entry Level,400000,600000,Full-time,SQL;Python;Excel;Tableau
+13,ML Engineer,Adobe,Noida,Senior Level,1800000,2600000,Full-time,Python;ML;Deep Learning;PyTorch
+14,SQL Developer,HCL,Chennai,Entry Level,300000,500000,Full-time,SQL;MySQL;Python;Database
+15,Data Scientist,Reliance,Mumbai,Mid Level,900000,1500000,Full-time,Python;Statistics;ML;Pandas
+16,Cloud Data Engineer,Amazon,Hyderabad,Senior Level,1600000,2400000,Full-time,Python;AWS;SQL;Spark
+17,BI Developer,Infosys,Pune,Entry Level,400000,650000,Full-time,SQL;Power BI;Excel;DAX
+18,AI Engineer,StartUpX,Pune,Entry Level,500000,800000,Full-time,Python;GenAI;LangChain;LLM
+19,Data Analyst,Swiggy,Bengaluru,Mid Level,700000,1100000,Full-time,SQL;Python;Tableau;Excel
+20,Data Engineer,Oracle,Noida,Mid Level,900000,1400000,Full-time,Python;SQL;ETL;Cloud

@@ -1,0 +1,21 @@
+id,title,company,location,experience,min_salary,max_salary,job_type,skills,avg_salary
+1,Data Analyst,TCS,Pune,Entry Level,300000,500000,Full-Time,Excel;Power Bi;Python;Sql,400000
+2,Data Engineer,Accenture,Bengaluru,Mid Level,700000,1200000,Full-Time,Aws;Python;Spark;Sql,950000
+3,Python Developer,Infosys,Hyderabad,Entry Level,350000,600000,Full-Time,Django;Git;Python;Sql,475000
+4,Machine Learning Engineer,Google,Bengaluru,Senior Level,1800000,2800000,Full-Time,Ml;Python;Sql;Tensorflow,2300000
+5,Data Analyst,Wipro,Mumbai,Entry Level,400000,650000,Full-Time,Excel;Power Bi;Python;Sql,525000
+6,Data Scientist,Amazon,Bengaluru,Mid Level,1200000,1800000,Full-Time,Pandas;Python;Scikit-Learn;Sql,1500000
+7,Data Engineer,Capgemini,Pune,Entry Level,450000,750000,Full-Time,Aws;Etl;Python;Sql,600000
+8,Business Analyst,Deloitte,Mumbai,Mid Level,800000,1300000,Full-Time,Excel;Power Bi;Sql;Tableau,1050000
+9,Ai Engineer,Microsoft,Hyderabad,Senior Level,2000000,3000000,Full-Time,Genai;Llm;Python;Pytorch,2500000
+10,Python Developer,Cognizant,Pune,Entry Level,350000,550000,Full-Time,Flask;Python;Rest Api;Sql,450000
+11,Data Engineer,Flipkart,Bengaluru,Mid Level,1000000,1600000,Full-Time,Airflow;Python;Spark;Sql,1300000
+12,Data Analyst,IBM,Hyderabad,Entry Level,400000,600000,Full-Time,Excel;Python;Sql;Tableau,500000
+13,Ml Engineer,Adobe,Noida,Senior Level,1800000,2600000,Full-Time,Deep Learning;Ml;Python;Pytorch,2200000
+14,Sql Developer,HCL,Chennai,Entry Level,300000,500000,Full-Time,Database;Mysql;Python;Sql,400000
+15,Data Scientist,Reliance,Mumbai,Mid Level,900000,1500000,Full-Time,Ml;Pandas;Python;Statistics,1200000
+16,Cloud Data Engineer,Amazon,Hyderabad,Senior Level,1600000,2400000,Full-Time,Aws;Python;Spark;Sql,2000000
+17,Bi Developer,Infosys,Pune,Entry Level,400000,650000,Full-Time,Dax;Excel;Power Bi;Sql,525000
+18,Ai Engineer,StartUpX,Pune,Entry Level,500000,800000,Full-Time,Genai;Langchain;Llm;Python,650000
+19,Data Analyst,Swiggy,Bengaluru,Mid Level,700000,1100000,Full-Time,Excel;Python;Sql;Tableau,900000
+20,Data Engineer,Oracle,Noida,Mid Level,900000,1400000,Full-Time,Cloud;Etl;Python;Sql,1150000

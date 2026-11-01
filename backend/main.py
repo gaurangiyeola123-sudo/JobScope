@@ -7,6 +7,8 @@ from real_analytics import (
     get_experience_analysis,
     get_top_companies
 )
+from pydantic import BaseModel, Field
+from gemini_service import generate_ai_response
 import re
 from itertools import combinations
 
@@ -45,6 +47,17 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# ==========================================
+# AI CAREER ADVISOR - REQUEST MODEL
+# ==========================================
+
+class CareerAdvisorRequest(BaseModel):
+    education: str = Field(min_length=2, max_length=200)
+    skills: str = Field(min_length=1, max_length=1000)
+    interests: str = Field(min_length=2, max_length=1000)
+    preferred_domain: str = Field(min_length=2, max_length=100)
+    experience_level: str = Field(min_length=2, max_length=100)
 
 
 # --------------------------------------------------
@@ -636,3 +649,79 @@ def get_real_job_details(
         "reviews_count": job.reviews_count,
         "aggregate_rating": job.aggregate_rating
     }
+# ==========================================
+# AI CAREER ADVISOR API
+# ==========================================
+
+@app.post("/api/ai/career-advisor")
+def ai_career_advisor(request: CareerAdvisorRequest):
+
+    prompt = f"""
+    You are JobScope AI, an expert career advisor specializing
+    in technology, data engineering, analytics, and AI/ML careers.
+
+    Analyze the following candidate profile.
+
+    EDUCATION:
+    {request.education}
+
+    CURRENT SKILLS:
+    {request.skills}
+
+    INTERESTS:
+    {request.interests}
+
+    PREFERRED CAREER DOMAIN:
+    {request.preferred_domain}
+
+    EXPERIENCE LEVEL:
+    {request.experience_level}
+
+    Provide a personalized career analysis using these sections:
+
+    1. CAREER PROFILE
+       Summarize the candidate's current position.
+
+    2. RECOMMENDED CAREER ROLES
+       Suggest the 3 most suitable career roles.
+       Explain why each role is appropriate.
+
+    3. SKILLS GAP
+       Identify important missing technical and professional skills.
+
+    4. LEARNING PRIORITIES
+       Rank the skills the candidate should learn first.
+       Explain their relevance.
+
+    5. CAREER ROADMAP
+       Provide a practical 6-month learning roadmap.
+
+    6. INDUSTRY OPPORTUNITIES
+       Explain relevant industry opportunities and technologies.
+
+    7. FINAL RECOMMENDATION
+       Give one clear recommended career direction.
+
+    Important instructions:
+    - Be realistic and specific.
+    - Consider the candidate's current skill level.
+    - Do not invent qualifications or work experience.
+    - Distinguish existing skills from recommended skills.
+    - Use clear headings and bullet points.
+    - Avoid generic motivational advice.
+    """
+
+    try:
+        result = generate_ai_response(prompt)
+
+        return {
+            "success": True,
+            "message": "Career analysis generated successfully",
+            "career_analysis": result
+        }
+
+    except Exception as error:
+        raise HTTPException(
+            status_code=502,
+            detail=f"AI career analysis failed: {str(error)}"
+        )

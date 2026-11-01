@@ -58,5 +58,20 @@ export const getRealJobs = (params = {}) =>
 
 export const getRealJobDetails = (jobId) =>
   API.get(`/real/jobs/${jobId}`);
+export const getSalaryOverview = () =>
+  API.get("/real/salary/overview");
 
+export const getSalaryDistribution = () =>
+  API.get("/real/salary/distribution");
+
+export const getSalaryByRole = (limit = 10) =>
+  API.get("/real/salary/by-role", { params: { limit } });
+
+export const getSalaryByCity = () =>
+  API.get("/real/salary/by-city");
+export const getSalaryPercentiles = () =>
+  API.get("/real/salary/percentiles");
+
+export const getSalaryByExperience = () =>
+  API.get("/real/salary/by-experience");
 export default API;

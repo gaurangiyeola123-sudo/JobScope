@@ -7,6 +7,21 @@ from real_analytics import (
     get_experience_analysis,
     get_top_companies
 )
+from salary_analytics import get_salary_percentiles
+from salary_analytics import (
+    get_salary_overview,
+    get_salary_distribution,
+    get_salary_by_role,
+    get_salary_by_city,
+)
+from salary_analytics import (
+    get_salary_overview,
+    get_salary_distribution,
+    get_salary_by_role,
+    get_salary_by_city,
+    get_salary_percentiles,
+    get_salary_by_experience,
+)
 from pydantic import BaseModel, Field
 from gemini_service import generate_ai_response
 import re
@@ -502,7 +517,9 @@ def real_experience(db: Session = Depends(get_db)):
 @app.get("/api/real/companies")
 def real_companies(limit: int = 10, db: Session = Depends(get_db)):
     return get_top_companies(db, limit)
-
+@app.get("/api/real/salary/percentiles")
+def real_salary_percentiles(db: Session = Depends(get_db)):
+    return get_salary_percentiles(db)
 # ==========================================
 # REAL JOB EXPLORER API
 # ==========================================
@@ -649,6 +666,27 @@ def get_real_job_details(
         "reviews_count": job.reviews_count,
         "aggregate_rating": job.aggregate_rating
     }
+@app.get("/api/real/salary/overview")
+def real_salary_overview(db: Session = Depends(get_db)):
+    return get_salary_overview(db)
+
+
+@app.get("/api/real/salary/distribution")
+def real_salary_distribution(db: Session = Depends(get_db)):
+    return get_salary_distribution(db)
+
+
+@app.get("/api/real/salary/by-role")
+def real_salary_by_role(db: Session = Depends(get_db)):
+    return get_salary_by_role(db)
+
+
+@app.get("/api/real/salary/by-city")
+def real_salary_by_city(db: Session = Depends(get_db)):
+    return get_salary_by_city(db)
+@app.get("/api/real/salary/by-experience")
+def real_salary_by_experience(db: Session = Depends(get_db)):
+    return get_salary_by_experience(db)
 # ==========================================
 # AI CAREER ADVISOR API
 # ==========================================

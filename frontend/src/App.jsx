@@ -19,6 +19,7 @@ import {
   Target,
   Code2
 } from "lucide-react";
+import SalaryAnalytics from "./SalaryAnalytics";
 
 import CareerAdvisor from "./CareerAdvisor";
 import RealAnalytics from "./RealAnalytics";
@@ -520,6 +521,7 @@ function App() {
               </section>
 
               <RealAnalytics />
+              <SalaryAnalytics />
 
               <section className="grid gap-5 xl:grid-cols-2">
                 <ChartCard
